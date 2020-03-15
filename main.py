@@ -2,6 +2,12 @@ import os
 import glob
 import json
 
+CODECS = ['utf-8','cp932','shift_jis','euc_jp',
+          'euc_jis_2004','euc_jisx0213',
+          'iso2022_jp','iso2022_jp_1','iso2022_jp_2','iso2022_jp_2004','iso2022_jp_3','iso2022_jp_ext',
+          'shift_jis_2004','shift_jisx0213',
+          'utf_16','utf_16_be','utf_16_le','utf_7','utf_8_sig']
+
 def dir_list_of(jsondata, current_dir='')->list:
     dirs = []
     if isinstance(jsondata, int) or isinstance(jsondata, str):
@@ -46,13 +52,21 @@ def write_text(data, output_filepath=''):
     with open(output_filepath, mode='w') as f:
         f.write(str(data))
 
+def decode_json(jsonfile)->str:
+    for codec in CODECS:
+        try:
+            with open(jsonfile, encoding=codec) as f:
+                return f.read()
+        except:
+            continue
+
 if __name__ == "__main__":
     jsonfiles = glob.glob('./json/*')
     for jsonfile in jsonfiles:
         jsondict = {}
         filename = os.path.splitext(os.path.basename(jsonfile))[0]
-        with open(jsonfile, encoding='utf-8') as f:
-            jsondict = json.loads(f.read())
+        json_str = decode_json(jsonfile)
+        jsondict = json.loads(json_str)
         root_dir = 'api/' + filename
         os.makedirs(root_dir, exist_ok=True)
         dirs = dir_list_of(jsondict, root_dir)
