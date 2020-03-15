@@ -46,10 +46,10 @@ def seperate_jsons(jsondata, current_dir='')->list:
 
 def write_dict_as_json(jsondata:dict, output_filepath=''):
     with open(output_filepath, 'w', encoding='utf-8') as f:
-        json.dump(jsondata, f, indent=4)
+        json.dump(jsondata, f, indent=4, ensure_ascii=False)
 
 def write_text(data, output_filepath=''):
-    with open(output_filepath, mode='w') as f:
+    with open(output_filepath, mode='w', encoding='utf-8') as f:
         f.write(str(data))
 
 def decode_json(jsonfile)->str:
