@@ -1,7 +1,6 @@
 import os
 import glob
 import json
-from exlib import json2dir
 
 def dir_list_of(jsondata, current_dir='')->list:
     dirs = []
