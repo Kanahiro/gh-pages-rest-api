@@ -1,5 +1,5 @@
 ## What is this
-This make a virtial REST API server on GitHub repository.
+This make a virtual REST API server on GitHub repository.
 By analyzing JSON files, the script makes directories and some files.
 User can access datas of JSON file as if REST API server
 
