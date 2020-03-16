@@ -4,7 +4,7 @@ By analyzing JSON files, the script makes directories and some files.
 User can access datas of JSON file as if REST API server
 
 ## Sample
-Now sample.json is in it and have following structure.
+Now sample.json is in ./json and have following structure.
 
 ```json
 
