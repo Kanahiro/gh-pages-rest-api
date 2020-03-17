@@ -45,4 +45,4 @@ Now only 'sample.json' is in ./json . When main.py runs and loads sample.json, i
 1. Fork this repo
 2. Activate GitHub Actions and Pages (gh-pages)
 3. Set JSON files in ./json
-4. Push to master and fire Actions and start hosting.
+4. Push to master and fire Actions, then start hosting.
