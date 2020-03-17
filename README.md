@@ -30,7 +30,8 @@ Now sample.json is in ./json and have following structure.
 ```
 
 The script loads JSON files in ./json .
-If loads sample.json, it makes files as you can access like following.
+
+Now only 'sample.json' is in ./json . When main.py runs and loads sample.json, it makes files as you can access like following.
 
 |  data you want  |  REST API URL  |
 | ---- | ---- |
