@@ -5,15 +5,14 @@
             "date": "2020-01-28T00:00",
             "place": "japan",
             "age": "22",
-            "sex": "female"
+            "sex": "男"
         },
         {
             "no": "2",
             "date": "2020-02-14T00:00",
             "place": "australia",
             "age": "50",
-            "sex": "male"
+            "sex": "女"
         }
-    ],
-    "last_update": "2020-03-14T23:14:01.849130+09:00"
+    ]
 }
